@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #35424a 0%, #e8491d 100%);
+    color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background: #333; /* Change header background color on scroll */
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+/* Showcase */
+.showcase {
+    min-height: 400px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.showcase-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.showcase h1 {
+    font-size: 50px;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.showcase p {
+    font-size: 20px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .showcase-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .showcase-image {
+        margin: 0 0 20px 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    .showcase h1 {
+        font-size: 36px;
+    }
+
+    .showcase p {
+        font-size: 18px;
+    }
+}
+
+/* Main Content */
+main {
+    padding: 80px 20px 20px;
+    background: #ffffff;
+}
+
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #ffffff;
+    position: relative;
+}
+
+section h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    background: #f9f9f9;
+}
+
+#about p {
+    line-height: 1.6;
+}
+
+/* Projects Section */
+#projects {
+    background: #e9ecef;
+}
+
+#projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+#projects li {
+    margin-bottom: 20px;
+}
+
+#projects h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#projects p div {
+    margin-bottom: 10px;
+}
+
+#projects a {
+    color: #e8491d;
+    text-decoration: none;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+}
+
+/* Skills Section */
+#skills {
+    background: #f9f9f9;
+}
+
+#skills h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    background: #e9ecef;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Certificates Section */
+#certificates {
+    background: #e9ecef;
+}
+
+#certificates ul {
+    list-style: none;
+    padding: 0;
+}
+
+#certificates li {
+    margin-bottom: 10px;
+}
+
+#certificates a {
+    color: #e8491d;
+    text-decoration: none;
+}
+
+#certificates a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+    background: #f9f9f9;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    background: #e8491d;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #35424a;
+}
+
+#contact-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact-details p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header #branding {
+        float: none;
+        text-align: center;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .showcase h1 {
+        font-size: 40px;
+    }
+
+    .showcase p {
+        font-size: 18px;
+    }
+}
